@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Cursor</title>
+    <!-- Favicon img -->
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.png"> -->
+    <!-- Bootstarp min css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- All min css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Swiper bundle min css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Magnigic popup css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Aos css -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Nice select css -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<style>
+    /* Main Colors */
+    /* Fonts */
+    /* Screen sizes */
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+    /* Document
+   ========================================================================== */
+    /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+    html {
+        line-height: 1.15;
+        /* 1 */
+        -ms-text-size-adjust: 100%;
+        /* 2 */
+        -webkit-text-size-adjust: 100%;
+        /* 2 */
+    }
+
+    /* Sections
+   ========================================================================== */
+    /**
+ * Remove the margin in all browsers (opinionated).
+ */
+    body {
+        margin: 0;
+    }
+
+    /**
+ * Add the correct display in IE 9-.
+ */
+    article,
+    aside,
+    footer,
+    header,
+    nav,
+    section {
+        display: block;
+    }
+
+    /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+
+    /* Grouping content
+   ========================================================================== */
+    /**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+    figcaption,
+    figure,
+    main {
+        /* 1 */
+        display: block;
+    }
+
+    /**
+ * Add the correct margin in IE 8.
+ */
+    figure {
+        margin: 1em 40px;
+    }
+
+    /**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+    hr {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        /* 1 */
+        height: 0;
+        /* 1 */
+        overflow: visible;
+        /* 2 */
+    }
+
+    /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+    pre {
+        font-family: monospace, monospace;
+        /* 1 */
+        font-size: 1em;
+        /* 2 */
+    }
+
+    /* Text-level semantics
+   ========================================================================== */
+    /**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+    a {
+        background-color: transparent;
+        /* 1 */
+        -webkit-text-decoration-skip: objects;
+        /* 2 */
+    }
+
+    /**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+    abbr[title] {
+        border-bottom: none;
+        /* 1 */
+        text-decoration: underline;
+        /* 2 */
+        -webkit-text-decoration: underline dotted;
+        -moz-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+        /* 2 */
+    }
+
+    /**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+    b,
+    strong {
+        font-weight: inherit;
+    }
+
+    /**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+    code,
+    kbd,
+    samp {
+        font-family: monospace, monospace;
+        /* 1 */
+        font-size: 1em;
+        /* 2 */
+    }
+
+    /**
+ * Add the correct font style in Android 4.3-.
+ */
+    dfn {
+        font-style: italic;
+    }
+
+    /**
+ * Add the correct background and color in IE 9-.
+ */
+    mark {
+        background-color: #ff0;
+        color: #000;
+    }
+
+    /**
+ * Add the correct font size in all browsers.
+ */
+    small {
+        font-size: 80%;
+    }
+
+    /**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    /* Embedded content
+   ========================================================================== */
+    /**
+ * Add the correct display in IE 9-.
+ */
+    audio,
+    video {
+        display: inline-block;
+    }
+
+    /**
+ * Add the correct display in iOS 4-7.
+ */
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+
+    /**
+ * Remove the border on images inside links in IE 10-.
+ */
+    img {
+        border-style: none;
+    }
+
+    /**
+ * Hide the overflow in IE.
+ */
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+    /* Forms
+   ========================================================================== */
+    /**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: sans-serif;
+        /* 1 */
+        font-size: 100%;
+        /* 1 */
+        line-height: 1.15;
+        /* 1 */
+        margin: 0;
+        /* 2 */
+    }
+
+    /**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+    button,
+    input {
+        /* 1 */
+        overflow: visible;
+    }
+
+    /**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+    button,
+    select {
+        /* 1 */
+        text-transform: none;
+    }
+
+    /**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+    button,
+    html [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+        /* 2 */
+    }
+
+    /**
+ * Remove the inner border and padding in Firefox.
+ */
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    /**
+ * Restore the focus styles unset by the previous rule.
+ */
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+    }
+
+    /**
+ * Correct the padding in Firefox.
+ */
+    fieldset {
+        padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+    legend {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        /* 1 */
+        color: inherit;
+        /* 2 */
+        display: table;
+        /* 1 */
+        max-width: 100%;
+        /* 1 */
+        padding: 0;
+        /* 3 */
+        white-space: normal;
+        /* 1 */
+    }
+
+    /**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+    progress {
+        display: inline-block;
+        /* 1 */
+        vertical-align: baseline;
+        /* 2 */
+    }
+
+    /**
+ * Remove the default vertical scrollbar in IE.
+ */
+    textarea {
+        overflow: auto;
+    }
+
+    /**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+    [type="checkbox"],
+    [type="radio"] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        /* 1 */
+        padding: 0;
+        /* 2 */
+    }
+
+    /**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+    }
+
+    /**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+    [type="search"] {
+        -webkit-appearance: textfield;
+        /* 1 */
+        outline-offset: -2px;
+        /* 2 */
+    }
+
+    /**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+
+    /**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        /* 1 */
+        font: inherit;
+        /* 2 */
+    }
+
+    /* Interactive
+   ========================================================================== */
+    /*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+    details,
+    menu {
+        display: block;
+    }
+
+    /*
+ * Add the correct display in all browsers.
+ */
+    summary {
+        display: list-item;
+    }
+
+    /* Scripting
+   ========================================================================== */
+    /**
+ * Add the correct display in IE 9-.
+ */
+    canvas {
+        display: inline-block;
+    }
+
+    /**
+ * Add the correct display in IE.
+ */
+    template {
+        display: none;
+    }
+
+    /* Hidden
+   ========================================================================== */
+    /**
+ * Add the correct display in IE 10-.
+ */
+    
+
+    .ht-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        contain: layout style size;
+        pointer-events: none;
+        will-change: transform;
+        -webkit-transition: opacity 0.3s, color 0.4s;
+        -o-transition: opacity 0.3s, color 0.4s;
+        -moz-transition: opacity 0.3s, color 0.4s;
+        transition: opacity 0.3s, color 0.4s;
+    }
+
+    .ht-cursor:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: -24px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        background: currentColor;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
+        transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
+        -o-transition: opacity 0.1s, -o-transform 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out, opacity 0.1s, -moz-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, opacity 0.1s;
+        transition: transform 0.3s ease-in-out, opacity 0.1s, -webkit-transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
+    }
+
+    .ht-cursor-text {
+        position: absolute;
+        top: -18px;
+        left: -18px;
+        width: 36px;
+        height: 36px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transform: scale(0) rotate(10deg);
+        -moz-transform: scale(0) rotate(10deg);
+        -ms-transform: scale(0) rotate(10deg);
+        -o-transform: scale(0) rotate(10deg);
+        transform: scale(0) rotate(10deg);
+        opacity: 0;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+        transition: opacity 0.4s, -webkit-transform 0.3s;
+        -o-transition: opacity 0.4s, -o-transform 0.3s;
+        -moz-transition: opacity 0.4s, transform 0.3s, -moz-transform 0.3s;
+        transition: opacity 0.4s, transform 0.3s;
+        transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+    }
+
+    @supports (mix-blend-mode: exclusion) {
+
+        .ht-cursor.-exclusion,
+        .ht-cursor.-opaque {
+            mix-blend-mode: exclusion;
+        }
+    }
+
+    @supports (mix-blend-mode: exclusion) {
+
+        .ht-cursor.-exclusion:before,
+        .ht-cursor.-opaque:before {
+            background: white;
+        }
+    }
+
+    .ht-cursor.-normal,
+    .ht-cursor.-text {
+        mix-blend-mode: normal;
+    }
+
+    .ht-cursor.-normal:before,
+    .ht-cursor.-text:before {
+        background: currentColor;
+    }
+
+    .ht-cursor.-inverse {
+        color: white;
+    }
+
+    .ht-cursor.-visible:before {
+        -webkit-transform: scale(0.2);
+        -moz-transform: scale(0.2);
+        -ms-transform: scale(0.2);
+        -o-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+
+    .ht-cursor.-visible.-active:before {
+        -webkit-transform: scale(0.23);
+        -moz-transform: scale(0.23);
+        -ms-transform: scale(0.23);
+        -o-transform: scale(0.23);
+        transform: scale(0.23);
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+
+    .ht-cursor.-pointer:before {
+        -webkit-transform: scale(0.15);
+        -moz-transform: scale(0.15);
+        -ms-transform: scale(0.15);
+        -o-transform: scale(0.15);
+        transform: scale(0.15);
+    }
+
+    .ht-cursor.-text:before {
+        opacity: 0.85;
+        -webkit-transform: scale(1.7);
+        -moz-transform: scale(1.7);
+        -ms-transform: scale(1.7);
+        -o-transform: scale(1.7);
+        transform: scale(1.7);
+    }
+
+    .ht-cursor.-text .ht-cursor-text {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .ht-cursor.-text.-active:before {
+        -webkit-transform: scale(1.6);
+        -moz-transform: scale(1.6);
+        -ms-transform: scale(1.6);
+        -o-transform: scale(1.6);
+        transform: scale(1.6);
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
+
+    .ht-cursor.-opaque:before {
+        -webkit-transform: scale(1.32);
+        -moz-transform: scale(1.32);
+        -ms-transform: scale(1.32);
+        -o-transform: scale(1.32);
+        transform: scale(1.32);
+    }
+
+    .ht-cursor.-opaque.-active:before {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .ht-cursor.-md:before {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+    .ht-cursor.-lg:before {
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+        transform: scale(2);
+    }
+
+    .ht-cursor.-hidden:before {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .-color-red {
+        color: #D20A0A;
+    }
+
+    .-color-green {
+        color: #83B002;
+    }
+
+    .-color-accent-lilac {
+        color: #8d53e9;
+    }
+
+    .-color-accent-lilac-bg {
+        background: #8d53e9;
+    }
+
+    .ht-demo {
+        background: #fff;
+    }
+
+    .ht-demo-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .ht-demo-container {
+        padding: 0 20px;
+    }
+
+    @media (min-width: 1600px) {
+        .ht-demo-container {
+            padding: 0 120px;
+        }
+    }
+
+    .ht-demo-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    @media (min-width: 1600px) {
+        .ht-demo-row {
+            margin: 60px 0;
+        }
+    }
+
+    .ht-demo-item {
+        position: relative;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 50px 30px;
+        margin: 0 20px;
+        color: #000;
+        background: #ecedee;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    @media (min-width: 1600px) {
+        .ht-demo-item {
+            padding: 90px 30px;
+            margin: 0 30px;
+        }
+    }
+
+    .ht-demo-item-title {
+        position: relative;
+        margin: 0 0 25px 0;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .ht-demo-item-text {
+        position: relative;
+        max-width: 70%;
+        margin: 0 auto;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 150%;
+    }
+
+    /* Cursor CSS */
+    /* Cursor */
+    .ht-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        contain: layout style size;
+        pointer-events: none;
+        will-change: transform;
+        transition: opacity 0.3s, color 0.4s;
+    }
+
+    .ht-cursor:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        left: -24px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        transform: scale(0);
+        background: currentColor;
+        border-radius: 50%;
+        transition: transform 0.3s ease-in-out, opacity 0.1s;
+    }
+
+    .ht-cursor-text {
+        position: absolute;
+        top: -18px;
+        left: -18px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0) rotate(10deg);
+        opacity: 0;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        transition: opacity 0.4s, transform 0.3s;
+    }
+
+    @supports (mix-blend-mode: exclusion) {
+
+        .ht-cursor.-exclusion,
+        .ht-cursor.-opaque {
+            mix-blend-mode: exclusion;
+        }
+    }
+
+    @supports (mix-blend-mode: exclusion) {
+
+        .ht-cursor.-exclusion:before,
+        .ht-cursor.-opaque:before {
+            background: white;
+        }
+    }
+
+    .ht-cursor.-normal,
+    .ht-cursor.-text {
+        mix-blend-mode: normal;
+    }
+
+    .ht-cursor.-normal:before,
+    .ht-cursor.-text:before {
+        background: currentColor;
+    }
+
+    .ht-cursor.-inverse {
+        color: white;
+    }
+
+    .ht-cursor.-visible:before {
+        transform: scale(0.2);
+    }
+
+    .ht-cursor.-visible.-active:before {
+        transform: scale(0.23);
+        transition-duration: 0.2s;
+    }
+
+    .ht-cursor.-pointer:before {
+        transform: scale(0.15);
+    }
+
+    .ht-cursor.-text:before {
+        opacity: 0.85;
+        transform: scale(1.7);
+    }
+
+    .ht-cursor.-text .ht-cursor-text {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .ht-cursor.-text.-active:before {
+        transform: scale(1.6);
+        transition-duration: 0.2s;
+    }
+
+    .ht-cursor.-opaque:before {
+        transform: scale(1.32);
+    }
+
+    .ht-cursor.-opaque.-active:before {
+        transform: scale(1.2);
+    }
+
+    .ht-cursor.-md:before {
+        transform: scale(1.5);
+    }
+
+    .ht-cursor.-lg:before {
+        transform: scale(2);
+    }
+
+    .ht-cursor.-hidden:before {
+        transform: scale(0);
+    }
+</style>
+
+<body>
+
+    <!-- Header area start here -->
+
+    <!-- Header area end here -->
+
+
+
+    <main>
+        <div class="container pt-120 pb-120">
+            <h3 class="pt-10 pb-10" data-cursor-text="Watch video">Hellow world</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolorum perferendis ab quos eveniet ad
+                harum nemo minima! Sit deserunt assumenda perspiciatis fugit labore repellat accusamus odit cum? Ipsum
+                expedita officia amet inventore maiores quo nihil a nam distinctio fugit! Assumenda sit sint ad,
+                recusandae sequi odit incidunt fuga molestias facere illum maiores quidem animi placeat nihil deleniti?
+                Magni aliquam saepe, cumque ad nostrum assumenda rerum, maiores, perferendis nisi iste at eligendi
+                reprehenderit facere velit dolorem? Fuga doloribus obcaecati corrupti itaque natus, facilis neque
+                expedita perspiciatis, adipisci recusandae dolore excepturi. Maiores dolore voluptatum dolorum odit nam
+                tempore nihil sed recusandae officiis fugit. Nam, quasi aperiam? Corrupti explicabo aspernatur
+                praesentium quis animi impedit aliquam totam. Debitis dolorem expedita eaque inventore perspiciatis
+                dignissimos assumenda minus consectetur, sapiente ex tenetur quo voluptate laborum cupiditate tempore in
+                alias nulla corrupti voluptates laudantium consequuntur repellendus? Fuga doloribus, esse iure
+                voluptates laborum impedit culpa eius facilis? Odio ratione eum non iste laboriosam, alias,
+                necessitatibus praesentium ipsa corporis laudantium eius debitis suscipit quia maxime soluta neque
+                temporibus libero aliquam qui dicta a consequuntur ea quis. Ea corporis commodi, quibusdam aliquam eos,
+                deserunt laudantium aliquid magni rerum sunt repellat hic alias enim ducimus excepturi, suscipit eaque
+                ad tenetur! Architecto optio corrupti illum, expedita numquam, quae exercitationem nesciunt, dolore
+                natus iusto voluptatem quisquam tempora quasi! Quo odio doloremque officiis exercitationem aperiam nemo
+                quia! Minus nemo ipsum provident eveniet magni excepturi ex. Incidunt iusto, numquam blanditiis,
+                repellat similique modi animi cupiditate voluptates quibusdam minima praesentium quos omnis velit error
+                tempore maxime officia debitis. Ratione ut quasi, laborum nesciunt rem a assumenda dolorum veritatis
+                dolore sapiente eveniet ea vel, laboriosam repellat incidunt itaque, quidem reiciendis qui iusto omnis.
+                At reiciendis quia in officia consectetur voluptate veniam hic dolorem magnam iste dignissimos unde
+                molestias dolor maiores, tenetur eos quaerat similique officiis dolores. Voluptas consequuntur officia
+                sit fugiat quod ipsa magni laudantium vel magnam earum. Accusantium maxime iusto qui, provident odio
+                dicta illo blanditiis sint non temporibus dolorum! Aliquid non quia, laudantium sint consequuntur
+                dolore, minus quam officia saepe dolorem repudiandae ea quo nisi praesentium temporibus necessitatibus
+                id omnis corporis provident delectus assumenda accusantium quasi. Recusandae ipsam molestias, earum
+                eligendi ipsum a quibusdam modi sequi doloremque, cupiditate ad officia corrupti. Voluptatum officiis
+                nam similique quasi iste nobis odio blanditiis pariatur adipisci in iure, debitis culpa dolorem
+                distinctio accusamus provident rem architecto iusto, impedit repellat nisi! Assumenda labore aliquam
+                possimus. Est quibusdam repellat fugiat, deserunt natus saepe aut minima quasi atque dolore. Non, est
+                doloremque. Amet, doloribus deleniti veritatis molestiae ipsa voluptas beatae numquam unde qui ipsum ut
+                esse, officiis quidem repellat reiciendis corrupti! Deleniti, provident! Debitis, alias accusamus. Esse
+                sit perferendis laboriosam, blanditiis labore magni saepe tenetur neque atque quasi pariatur magnam
+                molestiae nobis distinctio quisquam doloremque quibusdam eveniet repellendus, quo fuga eos consectetur,
+                porro sapiente? Ipsam recusandae in corrupti modi, fuga accusamus illum ab iure repellendus excepturi
+                ullam! Cumque blanditiis minima amet alias et nesciunt possimus debitis. Eveniet facere est, eaque
+                dolorem soluta sed nihil mollitia amet eligendi perspiciatis voluptates facilis voluptatem.</p>
+        </div>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolores dolorum illo dolor odit reiciendis
+            optio sint consequuntur et cupiditate rerum corrupti dicta, tempore aliquam ipsa iure mollitia velit
+            recusandae?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet unde cupiditate, accusamus non nisi placeat
+            explicabo? Aperiam doloremque ipsum omnis quisquam. Cum error ad amet consectetur officiis id esse nisi eos
+            sunt iste tempora vel quas incidunt hic labore nostrum atque voluptatum consequuntur debitis unde deserunt
+            magni, corporis beatae totam. Enim commodi itaque similique nostrum, velit distinctio doloremque ipsum earum
+            cum eum inventore porro, repellendus optio, molestiae recusandae sit ut modi labore voluptates. Aut, modi!
+            Asperiores esse cupiditate sequi maxime, officia, fugit nulla consectetur ab iusto deleniti debitis
+            voluptatibus nam iure vitae voluptate aperiam veritatis! Minus dolorem repudiandae consequuntur atque in ex
+            beatae iure odit non! Delectus deleniti eius unde at nostrum magnam quam! Dolor repudiandae voluptates amet
+            quisquam soluta aperiam iure libero aliquid doloribus architecto dolorem natus labore modi dolores,
+            excepturi, explicabo eligendi animi? Explicabo, totam. Nam dolorum laudantium culpa ullam quidem,
+            repudiandae reprehenderit qui quaerat possimus. Ducimus necessitatibus atque ullam ad molestiae! Rerum,
+            tempora quia quo illo minima voluptate eum eveniet doloribus asperiores a officia nemo, aperiam quis
+            exercitationem ipsam facere rem. Distinctio impedit quibusdam qui aliquam earum placeat, amet facilis harum
+            commodi veritatis, eum assumenda, explicabo inventore repudiandae. Nemo repellat hic dignissimos laborum
+            qui. Illum asperiores atque dolore repudiandae harum ad ratione mollitia porro id deleniti beatae, aperiam
+            blanditiis officia, autem ipsam ducimus alias quibusdam. Tempore reprehenderit, aliquid recusandae assumenda
+            porro vitae libero aliquam perferendis in, officiis ea impedit labore alias aut enim magni provident unde?
+            Obcaecati quis quo fuga animi voluptates nihil dolor inventore laudantium itaque. Error corrupti numquam
+            fuga dignissimos, sit fugiat placeat aliquid nostrum optio soluta reiciendis accusamus consequatur mollitia
+            fugit, alias eaque eligendi dolore quae eum recusandae vero, doloribus et. Quaerat soluta numquam, eius,
+            aliquam fugiat nihil enim facere delectus voluptatum assumenda unde possimus sapiente repellendus?
+            Consequuntur doloremque illum incidunt blanditiis dolor unde earum voluptas placeat fugit quis nostrum quam
+            non, cum quidem aspernatur quia? Totam cumque dolorem incidunt voluptates alias aperiam corrupti, quod error
+            numquam vero ab laborum doloribus recusandae et praesentium aut dolore! Magnam quibusdam odio cum, animi
+            aspernatur fugiat commodi. Possimus consequatur praesentium provident neque sunt sed omnis debitis
+            cupiditate accusamus voluptatem aliquid, ut voluptas perferendis iste aliquam exercitationem magnam illo
+            atque rerum expedita quasi et illum officia? Incidunt dicta dolores accusamus excepturi mollitia quidem
+            totam sed quibusdam exercitationem doloribus. Perspiciatis eius consequuntur neque molestias aliquid hic! Et
+            delectus fugiat aut omnis, commodi perspiciatis. Saepe sapiente fuga repellat quod quae mollitia tenetur
+            incidunt dolor ratione iusto asperiores, similique quaerat cupiditate quasi consequatur aut necessitatibus
+            quos? Accusantium quasi voluptas qui modi ratione quae! Alias, sunt fugit quod incidunt placeat distinctio
+            ratione minima, dignissimos ab, itaque at eum aliquam! Itaque sit dolor enim quibusdam hic doloremque quas
+            ipsum amet facilis cupiditate praesentium sequi officiis voluptate laudantium, sint non consequuntur, minima
+            maiores qui facere. Optio animi, quis doloremque nam illum doloribus culpa et similique error, voluptate
+            reiciendis nesciunt ad exercitationem repudiandae a, consequatur quia nihil magni sit eius molestias
+            dolorem. Quam excepturi natus porro distinctio ullam, eligendi inventore voluptatum accusantium officia
+            dolorum ducimus.</p>
+    </main>
+
+    <!-- Footer area start here -->
+
+    <!-- Footer area end here -->
+
+    <!-- Jquery 3. 7. 1 Min Js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap min Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Swiper bundle min Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Counterup min Js -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Aos Js -->
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/gsap/gsap.min.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap/ScrollToPlugin.min.js"></script>
+    <!-- Wow min Js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Magnific popup min Js -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Nice select min Js -->
+    <script src="assets/js/nice-select.min.js"></script>
+    <!-- Isotope pkgd min Js -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Waypoints Js -->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/vanilla-tilt.js"></script>
+    <!-- Script Js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
